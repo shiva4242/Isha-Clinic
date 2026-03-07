@@ -45,8 +45,8 @@ font-weight:500;
 
 .hero{
 height:90vh;
-background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-url("https://images.unsplash.com/photo-1596462502278-27bfdc403348");
+	background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url("images/hero.jpg");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -264,13 +264,13 @@ Our goal is to make every client feel confident, beautiful and radiant.
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+<img src="images/gallery1.jpg" alt="Gallery image 1">
 
-<img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66">
+<img src="images/gallery2.jpg" alt="Gallery image 2">
 
-<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+<img src="images/gallery3.jpg" alt="Gallery image 3">
 
-<img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
+<img src="images/gallery4.jpg" alt="Gallery image 4">
 
 </div>
 
@@ -310,17 +310,19 @@ Our goal is to make every client feel confident, beautiful and radiant.
 
 <h2 class="section-title">Book Appointment</h2>
 
-<form>
+<form id="appointmentForm">
 
-<input type="text" placeholder="Your Name" required>
+<input name="name" type="text" placeholder="Your Name" required>
 
-<input type="tel" placeholder="Phone Number" required>
+<input name="phone" type="tel" placeholder="Phone Number" required>
 
-<input type="text" placeholder="Service Required">
+<input name="service" type="text" placeholder="Service Required">
 
-<textarea placeholder="Message"></textarea>
+<textarea name="message" placeholder="Message"></textarea>
 
 <button type="submit">Submit</button>
+
+<div id="formMessage" style="text-align:center;margin-top:12px"></div>
 
 </form>
 
@@ -368,4 +370,42 @@ style="border:0">
 
 
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	const form = document.getElementById('appointmentForm');
+	const msg = document.getElementById('formMessage');
+
+	form.addEventListener('submit', async function(e){
+		e.preventDefault();
+		msg.textContent = 'Sending...';
+		const data = {
+			name: form.name.value.trim(),
+			phone: form.phone.value.trim(),
+			service: form.service.value.trim(),
+			message: form.message.value.trim()
+		};
+
+		try {
+			const res = await fetch('/api/appointments', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			});
+
+			if (res.ok) {
+				msg.style.color = '#1a7f37';
+				msg.textContent = 'Appointment request submitted. We will contact you shortly.';
+				form.reset();
+			} else {
+				const err = await res.json().catch(()=>({message:'Server error'}));
+				msg.style.color = '#a12a2a';
+				msg.textContent = err.message || 'Submission failed';
+			}
+		} catch (err) {
+			msg.style.color = '#a12a2a';
+			msg.textContent = 'Network error — check your connection.';
+		}
+	});
+});
+</script>
 </html>
