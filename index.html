@@ -8,169 +8,30 @@
 
 <meta name="description" content="Isha Beauty Clinic in Kakinada offers bridal makeup, hairstyling, facial treatments and event beauty services. Rated 5 stars by customers.">
 
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:Poppins, sans-serif;
-color:#333;
-}
-
-header{
-background:#fff;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:100;
-}
-
-.logo{
-font-family:"Playfair Display";
-font-size:26px;
-color:#b76e79;
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
-
-.hero{
-height:90vh;
-	background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-url("images/hero.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero h1{
-font-size:48px;
-font-family:"Playfair Display";
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:30px;
-}
-
-.btn{
-background:#b76e79;
-color:white;
-padding:12px 24px;
-border-radius:6px;
-text-decoration:none;
-margin:5px;
-display:inline-block;
-}
-
-section{
-padding:70px 10%;
-}
-
-.section-title{
-text-align:center;
-font-family:"Playfair Display";
-font-size:34px;
-margin-bottom:40px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-text-align:center;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-height:250px;
-object-fit:cover;
-}
-
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.review{
-background:#fafafa;
-padding:20px;
-border-radius:10px;
-}
-
-.contact{
-background:#f8f4f5;
-}
-
-form{
-display:grid;
-gap:15px;
-max-width:500px;
-margin:auto;
-}
-
-input,textarea{
-padding:12px;
-border:1px solid #ddd;
-border-radius:5px;
-}
-
-button{
-background:#b76e79;
-border:none;
-color:white;
-padding:12px;
-border-radius:6px;
-cursor:pointer;
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-@media(max-width:700px){
-
-.hero h1{
-font-size:32px;
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -179,18 +40,19 @@ font-size:32px;
 
 <div class="logo">ISHA BEAUTY CLINIC</div>
 
+<button class="menu-toggle" aria-label="Toggle menu">☰</button>
 <nav>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
+	<a href="#services">Services</a>
+	<a href="#gallery">Gallery</a>
+	<a href="#reviews">Reviews</a>
+	<a href="#contact">Contact</a>
 </nav>
 
 </header>
 
 <section class="hero">
 
-<div>
+<div class="hero-inner">
 <h1>Enhance Your Natural Beauty</h1>
 
 <p>Professional beauty services in Kakinada for weddings, events and everyday glow.</p>
@@ -223,34 +85,53 @@ Our goal is to make every client feel confident, beautiful and radiant.
 
 <div class="services">
 
-<div class="card">
-<h3>Bridal Makeup</h3>
-<p>Professional bridal makeup packages for weddings and receptions.</p>
+
+<div class="card reveal">
+	<div class="service-icon" aria-hidden="true">
+		<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4V6H10V4C10 2.9 10.9 2 12 2Z" fill="currentColor"/><path d="M7 9H17V11H7zM7 13H17V15H7zM7 17H13V19H7z" fill="currentColor"/></svg>
+	</div>
+	<h3>Bridal Makeup</h3>
+	<p>Professional bridal makeup packages for weddings and receptions.</p>
 </div>
 
-<div class="card">
-<h3>Party Makeup</h3>
-<p>Perfect makeup looks for celebrations and special events.</p>
+<div class="card reveal">
+	<div class="service-icon" aria-hidden="true">
+		<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4V6H10V4C10 2.9 10.9 2 12 2Z" fill="currentColor"/><path d="M7 9H17V11H7zM7 13H17V15H7zM7 17H13V19H7z" fill="currentColor"/></svg>
+	</div>
+	<h3>Party Makeup</h3>
+	<p>Perfect makeup looks for celebrations and special events.</p>
 </div>
 
-<div class="card">
-<h3>Hairstyling</h3>
-<p>Modern hairstyles for weddings, parties and everyday styling.</p>
+<div class="card reveal">
+	<div class="service-icon" aria-hidden="true">
+		<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4V6H10V4C10 2.9 10.9 2 12 2Z" fill="currentColor"/><path d="M7 9H17V11H7zM7 13H17V15H7zM7 17H13V19H7z" fill="currentColor"/></svg>
+	</div>
+	<h3>Hairstyling</h3>
+	<p>Modern hairstyles for weddings, parties and everyday styling.</p>
 </div>
 
-<div class="card">
-<h3>Facial Treatments</h3>
-<p>Skin rejuvenation and glow treatments.</p>
+<div class="card reveal">
+	<div class="service-icon" aria-hidden="true">
+		<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4V6H10V4C10 2.9 10.9 2 12 2Z" fill="currentColor"/><path d="M7 9H17V11H7zM7 13H17V15H7zM7 17H13V19H7z" fill="currentColor"/></svg>
+	</div>
+	<h3>Facial Treatments</h3>
+	<p>Skin rejuvenation and glow treatments.</p>
 </div>
 
-<div class="card">
-<h3>Threading & Waxing</h3>
-<p>Professional grooming and beauty care services.</p>
+<div class="card reveal">
+	<div class="service-icon" aria-hidden="true">
+		<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4V6H10V4C10 2.9 10.9 2 12 2Z" fill="currentColor"/><path d="M7 9H17V11H7zM7 13H17V15H7zM7 17H13V19H7z" fill="currentColor"/></svg>
+	</div>
+	<h3>Threading & Waxing</h3>
+	<p>Professional grooming and beauty care services.</p>
 </div>
 
-<div class="card">
-<h3>Event Preparation</h3>
-<p>Complete beauty preparation for weddings and functions.</p>
+<div class="card reveal">
+	<div class="service-icon" aria-hidden="true">
+		<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C13.1 2 14 2.9 14 4V6H10V4C10 2.9 10.9 2 12 2Z" fill="currentColor"/><path d="M7 9H17V11H7zM7 13H17V15H7zM7 17H13V19H7z" fill="currentColor"/></svg>
+	</div>
+	<h3>Event Preparation</h3>
+	<p>Complete beauty preparation for weddings and functions.</p>
 </div>
 
 </div>
@@ -264,13 +145,21 @@ Our goal is to make every client feel confident, beautiful and radiant.
 
 <div class="gallery">
 
-<img src="images/gallery1.jpg" alt="Gallery image 1">
+	<button class="gallery-btn reveal" data-index="0" aria-label="Open gallery image 1">
+		<img src="images/gallery1.jpg" alt="Gallery image 1" loading="lazy">
+	</button>
 
-<img src="images/gallery2.jpg" alt="Gallery image 2">
+	<button class="gallery-btn reveal" data-index="1" aria-label="Open gallery image 2">
+		<img src="images/gallery2.jpg" alt="Gallery image 2" loading="lazy">
+	</button>
 
-<img src="images/gallery3.jpg" alt="Gallery image 3">
+	<button class="gallery-btn reveal" data-index="2" aria-label="Open gallery image 3">
+		<img src="images/gallery3.jpg" alt="Gallery image 3" loading="lazy">
+	</button>
 
-<img src="images/gallery4.jpg" alt="Gallery image 4">
+	<button class="gallery-btn reveal" data-index="3" aria-label="Open gallery image 4">
+		<img src="images/gallery4.jpg" alt="Gallery image 4" loading="lazy">
+	</button>
 
 </div>
 
@@ -370,10 +259,26 @@ style="border:0">
 
 
 </body>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+	<button class="lb-close" aria-label="Close">×</button>
+	<button class="lb-prev" aria-label="Previous">‹</button>
+	<img class="lb-img" alt="Expanded gallery image">
+	<button class="lb-next" aria-label="Next">›</button>
+</div>
+
+<script src="scripts.js"></script>
+</html>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
 	const form = document.getElementById('appointmentForm');
 	const msg = document.getElementById('formMessage');
+
+	// mobile nav toggle
+	const menuBtn = document.querySelector('.menu-toggle');
+	menuBtn && menuBtn.addEventListener('click', ()=>{
+		document.querySelector('header').classList.toggle('open');
+	});
 
 	form.addEventListener('submit', async function(e){
 		e.preventDefault();
