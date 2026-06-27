@@ -1,0 +1,25 @@
+# Ignore large files and node_modules when publishing with Wrangler
+
+# Skip node_modules and common large binaries
+node_modules/
+**/workerd/bin/workerd
+
+# Skip local and CI artifacts
+.wrklog
+.dist
+.build
+
+# Git and repo metadata
+.git
+.gitignore
+
+# Docs and server code (not needed for static publish)
+README.md
+package.json
+package-lock.json
+yarn.lock
+server.js
+
+# OS files
+.DS_Store
+Thumbs.db
